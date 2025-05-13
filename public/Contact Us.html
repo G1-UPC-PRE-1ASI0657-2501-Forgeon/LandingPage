@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="assets/styles/stylesContactUs.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                alert('Your message has been sent successfully!'); 
+            });
+        });
+
+        let currentLanguage = 'en';
+
+        function switchLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            document.querySelectorAll('[data-en]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLanguage}`);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Ironclade Rentals Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="home-button" data-en="Home" data-es="Inicio">Home</a></li>
+                <li><a href="AboutUs.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+                <li><a href="Community.html" data-en="Community" data-es="Comunidad">Community</a></li>
+                <li><a href="Plans.html" data-en="Plans" data-es="Planes">Plans</a></li>
+                <li><a href="Contact Us.html" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
+                <li><a href="OurApp.html" class="our-app-button" data-en="Our App" data-es="Nuestra App">Our App</a></li>
+            </ul>
+        </nav>
+        <button class="language-switcher" onclick="switchLanguage()">EN</button>
+    </header>
+
+    <main>
+       <div class="contact-container">
+        <div class="contact-info">
+            <h1 data-en="Contact Us" data-es="Contáctenos">Contact Us</h1>
+            <h2 data-en="Get in touch today" data-es="Ponte en contacto hoy">Get in touch today</h2>
+            <p data-en="We invite you to provide your details to send us a message. We're here to listen and address your questions or concerns. Please fill out the form below, and we’ll be happy to assist you." data-es="Te invitamos a proporcionar tus datos para enviarnos un mensaje. Estamos aquí para escuchar y abordar tus preguntas o inquietudes. Por favor, completa el formulario a continuación y estaremos encantados de ayudarte.">We invite you to provide your details to send us a message. We're here to listen and address your questions or concerns. Please fill out the form below, and we’ll be happy to assist you.</p>
+            <p class="contact-details"><img src="assets/images/phone.png" alt="Phone Icon"> (123) 456 - 789</p>
+            <p class="contact-details"><img src="assets/images/mail.png" alt="Mail Icon"> contact@company.com </p>
+        </div>
+        <div class="contact-form">
+            <form id="contactForm">
+                <label for="name" data-en="Name" data-es="Nombre">Name</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="email" data-en="Email" data-es="Correo Electrónico">Email</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="message" data-en="Message" data-es="Mensaje">Message</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <button type="submit" data-en="Send" data-es="Enviar">Send</button>
+            </form>
+        
+        </div>
+    </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans</title>
+    <link rel="stylesheet" href="assets/styles/stylesPlans.css">
+    <script>
+        let currentLanguage = 'en';
+
+        function switchLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            document.querySelectorAll('[data-en]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLanguage}`);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Ironclade Rentals Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="home-button" data-en="Home" data-es="Inicio">Home</a></li>
+                <li><a href="AboutUs.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+                <li><a href="Community.html" data-en="Community" data-es="Comunidad">Community</a></li>
+                <li><a href="Plans.html" data-en="Plans" data-es="Planes">Plans</a></li>
+                <li><a href="Contact Us.html" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
+                <li><a href="OurApp.html" class="our-app-button" data-en="Our App" data-es="Nuestra App">Our App</a></li>
+            </ul>
+        </nav>
+        <button class="language-switcher" onclick="switchLanguage()">EN</button>
+    </header>
+
+    <main>
+        <br><br><br><br>
+        <h1 style="text-align: center; font-size: 4.5em;" data-en="Plans" data-es="Planes">Plans</h1>
+        <br>
+        <div class="plan-container">
+            <div class="plan-box">
+                <h2 data-en="Basic Plan" data-es="Plan Básico">Basic Plan</h2>
+                <p data-en="$49/month" data-es="$49/mes">$49/month</p>
+                <ul>
+                    <li data-en="- Listing of up to 10 vehicles." data-es="- Listado de hasta 10 vehículos.">- Listing of up to 10 vehicles.</li>
+                    <li data-en="- Simple interface for managing prices, availability, and vehicle features." data-es="- Interfaz simple para gestionar precios, disponibilidad y características de los vehículos.">- Simple interface for managing prices, availability, and vehicle features.</li>
+                    <li data-en="- Limited customer support." data-es="- Soporte al cliente limitado.">- Limited customer support.</li>
+                    <li data-en="- Basic performance reports." data-es="- Informes de rendimiento básicos.">- Basic performance reports.</li>
+                </ul>
+            </div>
+            <div class="plan-box">
+                <h2 data-en="Premium Plan" data-es="Plan Premium">Premium Plan</h2>
+                <p data-en="$149/month" data-es="$149/mes">$149/month</p>
+                <ul>
+                    <li data-en="- Listing of up to 50 vehicles." data-es="- Listado de hasta 50 vehículos.">- Listing of up to 50 vehicles.</li>
+                    <li data-en="- Automatic price management based on demand and seasonality." data-es="- Gestión automática de precios basada en la demanda y la estacionalidad.">- Automatic price management based on demand and seasonality.</li>
+                    <li data-en="- 24/7 support and a dedicated account manager." data-es="- Soporte 24/7 y un gerente de cuenta dedicado.">- 24/7 support and a dedicated account manager.</li>
+                </ul>
+            </div>
+            <div class="plan-box">
+                <h2 data-en="Corporate Plan" data-es="Plan Corporativo">Corporate Plan</h2>
+                <p data-en="$350/month" data-es="$350/mes">$350/month</p>
+                <ul>
+                    <li data-en="- Unlimited vehicle listings." data-es="- Listado ilimitado de vehículos.">- Unlimited vehicle listings.</li>
+                    <li data-en="- Detailed analytics with personalized recommendations to maximize revenue." data-es="- Análisis detallados con recomendaciones personalizadas para maximizar los ingresos.">- Detailed analytics with personalized recommendations to maximize revenue.</li>
+                    <li data-en="- Priority access to new features and platform improvements." data-es="- Acceso prioritario a nuevas funciones y mejoras de la plataforma.">- Priority access to new features and platform improvements.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

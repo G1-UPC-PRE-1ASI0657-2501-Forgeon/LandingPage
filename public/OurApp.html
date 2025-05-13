@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our App</title>
+    <link rel="stylesheet" href="assets/styles/stylesOurApp.css">
+    <script>
+        let currentLanguage = 'en';
+
+        function switchLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            document.querySelectorAll('[data-en]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLanguage}`);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Ironclade Rentals Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="home-button" data-en="Home" data-es="Inicio">Home</a></li>
+                <li><a href="AboutUs.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+                <li><a href="Community.html" data-en="Community" data-es="Comunidad">Community</a></li>
+                <li><a href="Plans.html" data-en="Plans" data-es="Planes">Plans</a></li>
+                <li><a href="Contact Us.html" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
+                <li><a href="OurApp.html" class="our-app-button" data-en="Our App" data-es="Nuestra App">Our App</a></li>
+            </ul>
+        </nav>
+        <button class="language-switcher" onclick="switchLanguage()">EN</button>
+    </header>
+
+    <main>
+        <br><br><br><br>
+        <div class="info-section">
+            <div class="info-image">
+                <img src="assets/images/caro.jpg" alt="App Image" style="width: 460px; height: 340px;margin-right: 50px;border-radius: 40px;">
+            </div>
+            <div class="info-text">
+                <h1 data-en="Manage Your Vehicle Fleet with Ease and Maximize Your Revenue" data-es="Gestione su Flota de Vehículos con Facilidad y Maximice sus Ingresos">Manage Your Vehicle Fleet with Ease and Maximize Your Revenue</h1>
+                <br>
+                <p data-en="With our app, list your vehicles, set dynamic pricing, monitor real-time performance, and enjoy seamless fleet management—all from one powerful platform." data-es="Con nuestra aplicación, liste sus vehículos, establezca precios dinámicos, monitoree el rendimiento en tiempo real y disfrute de una gestión de flotas sin problemas, todo desde una plataforma poderosa.">With our app, list your vehicles, set dynamic pricing, monitor real-time performance, and enjoy seamless fleet management—all from one powerful platform.</p>
+                <p data-en="Our app offers numerous benefits, including:" data-es="Nuestra aplicación ofrece numerosos beneficios, incluyendo:">Our app offers numerous benefits, including:</p>
+                <ul>
+                    <li data-en="- Real-time vehicle tracking" data-es="- Seguimiento de vehículos en tiempo real">- Real-time vehicle tracking</li>
+                    <li data-en="- Dynamic pricing adjustments" data-es="- Ajustes de precios dinámicos">- Dynamic pricing adjustments</li>
+                    <li data-en="- Comprehensive performance analytics" data-es="- Análisis de rendimiento integral">- Comprehensive performance analytics</li>
+                    <li data-en="- Seamless integration with existing systems" data-es="- Integración perfecta con sistemas existentes">- Seamless integration with existing systems</li>
+                    <li data-en="- User-friendly interface" data-es="- Interfaz fácil de usar">- User-friendly interface</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <link rel="stylesheet" href="assets/styles/stylesCommunity.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Ironclade Rentals Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="home-button" data-en="Home" data-es="Inicio">Home</a></li>
+                <li><a href="AboutUs.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+                <li><a href="Community.html" data-en="Community" data-es="Comunidad">Community</a></li>
+                <li><a href="Plans.html" data-en="Plans" data-es="Planes">Plans</a></li>
+                <li><a href="Contact Us.html" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
+                <li><a href="OurApp.html" class="our-app-button" data-en="Our App" data-es="Nuestra App">Our App</a></li>
+            </ul>
+        </nav>
+        <button class="language-switcher" onclick="switchLanguage()">EN</button>
+    </header>
+
+    <main>
+        <br><br><br><br>
+        <h1 style="text-align: center; font-size: 3.8em;" data-en="Community" data-es="Comunidad">Community</h1>
+        <br>
+        <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+            <div style="border: 1px solid #000; padding: 10px; width: 30%; background-color: #363636; color: #fff; border-radius: 10px;">
+                <h2 style="padding: 20px; font-size: 1.9em;" data-en="Fabricio Prado" data-es="Fabricio Prado">Fabricio Prado</h2>
+                <p style="padding: 20px; font-size: 1.2em;" data-en="This platform makes renting a car simple and efficient. Finding and booking a vehicle is quick, with lots of options and transparent pricing. It's my preferred choice for hassle-free rentals!" data-es="Esta plataforma hace que alquilar un coche sea simple y eficiente. Encontrar y reservar un vehículo es rápido, con muchas opciones y precios transparentes. ¡Es mi elección preferida para alquileres sin complicaciones!">This platform makes renting a car simple and efficient. Finding and booking a vehicle is quick, with lots of options and transparent pricing. It's my preferred choice for hassle-free rentals!</p>
+                <img src="assets/images/fabricioprado.jpg" alt="Fabricio Prado" style="width: 100px; height: 100px; float: right; border-radius: 50%; margin: 30px;">
+            </div>
+            <div style="border: 1px solid #000; padding: 10px; width: 30%; background-color: #363636; color: #fff; border-radius: 10px;">
+                <h2 style="padding: 20px; font-size: 1.9em;" data-en="Diego Larrea" data-es="Diego Larrea">Diego Larrea</h2>
+                <p style="padding: 20px; font-size: 1.2em;" data-en="This platform has streamlined our fleet management and significantly increased our bookings and revenue. The user-friendly interface and real-time analytics make it easy to manage everything effectively. Excellent support and a valuable tool for any fleet operator!" data-es="Esta plataforma ha simplificado nuestra gestión de flotas y ha aumentado significativamente nuestras reservas e ingresos. La interfaz fácil de usar y los análisis en tiempo real hacen que sea fácil gestionar todo de manera efectiva. ¡Excelente soporte y una herramienta valiosa para cualquier operador de flotas!">This platform has streamlined our fleet management and significantly increased our bookings and revenue. The user-friendly interface and real-time analytics make it easy to manage everything effectively. Excellent support and a valuable tool for any fleet operator!</p>
+                <img src="assets/images/larrecon.jpeg" alt="Diego Larrea" style=" width: 100px; height: 100px; float: right; border-radius: 50%; margin: 30px;">
+            </div>
+            <div style="border: 1px solid #000; padding: 10px; width: 30%; background-color: #363636; color: #fff; border-radius: 10px;">
+                <h2 style="padding: 20px; font-size: 1.9em;" data-en="Jhon Mendoza" data-es="Jhon Mendoza">Jhon Mendoza</h2>
+                <p style="padding: 20px; font-size: 1.2em;" data-en="Renting here is effortless. Easy booking, wide selection, and clear pricing make it my top choice for car rentals!" data-es="Alquilar aquí es fácil. La reserva es sencilla, hay una amplia selección y los precios son claros, ¡lo que lo convierte en mi mejor opción para alquilar coches!">Renting here is effortless. Easy booking, wide selection, and clear pricing make it my top choice for car rentals!</p>
+                <img src="assets/images/yonmendoza.jpeg" alt="Jhon Mendoza" style=" width: 100px; height: 100px; float: right; border-radius: 50%; margin: 30px;">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let currentLanguage = 'en';
+
+        function switchLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            document.querySelectorAll('[data-en]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLanguage}`);
+            });
+        }
+    </script>
+</body>
+
+</html>
